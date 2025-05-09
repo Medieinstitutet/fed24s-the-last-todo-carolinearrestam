@@ -63,7 +63,7 @@ export function TodoForm({ onAdd }: Props) {
           ))}
 
       </div>
-        <button className=" bg-sky-100 text-black px-4 py-2 border border-gray-300 rounded-xl cursor-pointer hover:border-blue-600 whitespace-nowrap">
+        <button className=" bg-sky-100 text-black px-4 py-2 border border-gray-400 rounded-xl cursor-pointer hover:border-blue-600 whitespace-nowrap">
         Lägg till
         </button>
 
