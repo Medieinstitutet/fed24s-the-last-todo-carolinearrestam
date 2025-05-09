@@ -4,6 +4,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 21%, rgba(120, 217, 255, 1) 100%);
 }
 
 @media (prefers-color-scheme: light) {

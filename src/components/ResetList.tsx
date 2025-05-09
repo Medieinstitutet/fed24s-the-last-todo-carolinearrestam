@@ -23,7 +23,7 @@ export function ResetList({ setTodos }: Props) {
     <div className="w-96 text-center mt-8 justify-center">
       <button
         onClick={handleReset}
-        className="px-6 py-2 mr-7 bg-red-200 text-red-800 border border-red-400 rounded-lg hover:bg-red-300"
+        className="px-6 py-2 mr-7 bg-red-200 text-red-800 border border-red-400 rounded-xl hover:bg-red-300"
       >
         Rensa listan
       </button>

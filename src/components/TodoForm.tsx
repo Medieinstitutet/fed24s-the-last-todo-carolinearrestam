@@ -49,11 +49,10 @@ export function TodoForm({ onAdd }: Props) {
         <input
           type="text"
           id="text"
-          placeholder="Lägg till.."
+          placeholder="Ny aktivitet.."
           value={text}
           onChange={handleChange}
-          onBlur={validate}
-          className="bg-white border border-gray-300 rounded-lg px-3 py-2 w-full inset-shadow-sm"
+          className="bg-white border border-gray-300 rounded-xl px-3 py-2 w-full inset-shadow-sm"
         />
 
         {errors
@@ -64,7 +63,7 @@ export function TodoForm({ onAdd }: Props) {
             </p>
           ))}
       </div>
-        <button className=" bg-white text-black px-4 py-2 border border-gray-300 rounded-lg cursor-pointer hover:border-blue-600 whitespace-nowrap">
+        <button className=" bg-sky-100 text-black px-4 py-2 border border-gray-300 rounded-xl cursor-pointer hover:border-blue-600 whitespace-nowrap">
         Lägg till
         </button>
 

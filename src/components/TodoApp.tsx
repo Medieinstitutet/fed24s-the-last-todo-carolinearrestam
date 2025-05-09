@@ -48,7 +48,7 @@ export function TodoApp() {
     .sort((a, b) => (sortList ? a.text.localeCompare(b.text) : 0));
 
   return (
-    <div className="w-96 p-6 bg-gray-100 rounded shadow-xl/30">
+    <div className="w-96 p-6 bg-gray-50 rounded-xl shadow-xl/30">
       <h2 className="text-2xl font-bold mb-4 text-center">Att göra lista:</h2>
 
       <TodoForm onAdd={addTodo} />
@@ -57,7 +57,7 @@ export function TodoApp() {
         <p>Klicka för att sortera på:</p>
         <button
           onClick={() => setSortList(!sortList)}
-          className="bg-white text-black px-4 py-2 border border-gray-300 rounded-lg cursor-pointer mb-12 hover:border-blue-600 whitespace-nowrap"
+          className="bg-sky-100 text-black px-4 py-2 border border-gray-300 rounded-xl cursor-pointer mb-12 hover:border-blue-600 whitespace-nowrap"
         >
         {sortList ? "A-Ö" : "Senast tillagd"}
         </button>
@@ -70,7 +70,7 @@ export function TodoApp() {
             {activeTodos.map((todo) => (
               <li
                 key={todo.id}
-                className="todo-item flex items-center gap-2 p-2 border rounded"
+                className="todo-item flex items-center gap-2 p-2 border rounded-xl bg-sky-100"
               >
                 <input
                   type="checkbox"
@@ -89,7 +89,7 @@ export function TodoApp() {
             {completedTodos.map((todo) => (
               <li
                 key={todo.id}
-                className="todo-item flex items-center gap-2 p-2 border rounded text-gray-500"
+                className="todo-item flex items-center gap-2 p-2 border rounded-xl text-gray-500 bg-sky-100"
               >
                 <input
                   type="checkbox"
