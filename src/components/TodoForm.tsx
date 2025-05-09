@@ -1,6 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { ErrorMessage } from "../models/ErrorMessage";
+import { ErrorMessageModel } from "../models/ErrorMessageModel";
 import "./TodoApp.css";
+import { ErrorMessage } from "./ErrorMessage";
+
 
 type Props = {
   onAdd: (text: string) => void;
@@ -8,7 +10,7 @@ type Props = {
 
 export function TodoForm({ onAdd }: Props) {
   const [text, setText] = useState("");
-  const [errors, setErrors] = useState<ErrorMessage[]>([]);
+  const [errors, setErrors] = useState<ErrorMessageModel[]>([]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
@@ -24,7 +26,7 @@ export function TodoForm({ onAdd }: Props) {
   };
 
   const validate = () => {
-    let temp: ErrorMessage[] = [];
+    let temp: ErrorMessageModel[] = [];
 
     if (text === "") {
       temp.push({
@@ -52,16 +54,14 @@ export function TodoForm({ onAdd }: Props) {
           placeholder="Ny aktivitet.."
           value={text}
           onChange={handleChange}
-          className="bg-white border border-gray-300 rounded-xl px-3 py-2 w-full inset-shadow-sm"
+          className="bg-white border border-gray-400 rounded-xl px-3 py-2 w-full inset-shadow-sm"
         />
 
         {errors
-          .filter((e) => e.name === "text")
           .map((e, i) => (
-            <p key={i} className="text-red-500 text-sm mt-1">
-              {e.error}
-            </p>
+            <ErrorMessage key={i} message={e.error} />
           ))}
+
       </div>
         <button className=" bg-sky-100 text-black px-4 py-2 border border-gray-300 rounded-xl cursor-pointer hover:border-blue-600 whitespace-nowrap">
         Lägg till
