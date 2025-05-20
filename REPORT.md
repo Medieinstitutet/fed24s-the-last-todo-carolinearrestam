@@ -51,10 +51,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för både G och VG. Den har hårdkodade todo-punkter, presenterar dessa i en lista, implementerar klickhändelse för att markera klart och ta bort todos, samt hanterar tillbaka-markering av klara todos. För VG har studenten dessutom implementerat ett formulär för att skapa nya todos, möjligheten att sortera listan, och använt Tailwind CSS för stil. Koden är välstrukturerad och använder React och TypeScript på ett sätt som är lätt att följa.
+📌 **Motivering:** Koden uppfyller alla krav för både G och VG. Det finns en hårdkodad lista med todo-punkter, dessa kan presenteras och hanteras genom klickhändelser. Koden tillför även sortering, tillåter skapande av nya todos, visar klara och oklara händelser och innehåller både grafik genom Tailwind CSS och strukturerad egen CSS.
 
 💡 **Förbättringsförslag:**  
-Det finns några mindre förbättringsmöjligheter: 
-1. Koden kan dra nytta av att bryta ut vissa delar av logiken i TodoApp-komponenten till egna custom hooks för att hålla komponenten mer fokuserad och hanterbar. 
-2. I nuläget sker ingen specifik hantering av vad som händer om localStorage-objektet inte kan parsa JSON-kod korrekt. Det kan vara bra att hantera detta fall med en try-catch för att säkerställa att applikationen slutar köra vid eventuella fel. 
-3. Förbättra eventhantering i formuläret och integrera mer robust försäkring om användarupplevelse, till exempel att automatiskt fokusera på inputfältet vid rendera, för en bättre UX. 
+Koden är generellt välstrukturerad men kan förstärkas genom att bryta ut några av de längre komponenterna i mindre delar för ökad läsbarhet och enklare underhåll. Konsistenta fil- och mappnamn samt att om alla komponenter följer samma mönster i sin syntax, t.ex. att alltid använda arrow functions istället för vanliga funktionsdeklarationer kan öka kodens konsistens. Dessutom kan state management förenklas eller abstrakteras med användning av en context eller state management-bibliotek som Redux om applikationen växer i framtiden. Implementering av mer enhetstestning kan också förbättra kodens robusthet.
